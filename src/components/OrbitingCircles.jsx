@@ -42,6 +42,7 @@ export function OrbitingCircles({
             )}
             {...props}
           >
+            <div className="absolute z-0 rounded-full h-10 w-10 bg-[#804feb] blur-xl opacity-10"></div>
             {child}
           </div>
         );

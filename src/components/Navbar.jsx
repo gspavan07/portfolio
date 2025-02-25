@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { SiGithub, SiLinkedin } from "react-icons/si";
+import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
-    <nav className=" lg:bg-[#7B4AE2]/5 rounded-2xl z-20">
+    <nav className=" lg:bg-[#110c20a4] md:mx-40 rounded-2xl z-20">
       <div className="lg:hidden flex justify-center items-center gap-5 cursor-pointer">
         <SiLinkedin color="grey" size={40} className="rounded-full" />
         <SiGithub color="grey " size={40} className="rounded-full" />
@@ -10,49 +11,48 @@ const Navbar = () => {
       <div className="px-12 py-4 lg:flex hidden items-center justify-between">
         {/* Logo */}
         <div className="flex items-center">
-          <a href="/">
+          <Link to="/">
             <img src="/logo.svg" alt="Logo" className="h-10" />
-          </a>
+          </Link>
         </div>
 
         {/* Navbar Items */}
         <div className="space-x-8 flex items-center">
           {/* Projects */}
-          <div>
-            <a
-              href="#products"
-              className="text-gray-500 hover:text-[#7B4AE2]/60 text-lg flex items-center"
-            >
-              <span className="font-medium ml-2">Projects</span>
-            </a>
-          </div>
+
+          <Link
+            to="#products"
+            className="text-gray-500 hover:text-[#7B4AE2]/60 text-lg flex items-center"
+          >
+            <span className="font-bold ml-2">Projects</span>
+          </Link>
+
           {/* Services */}
-          <div>
-            <a
-              href="#services"
-              className="text-gray-500 hover:text-[#7B4AE2]/60 text-lg flex items-center"
-            >
-              <span className="font-medium ml-2">Services</span>
-            </a>
-          </div>
+
+          <Link
+            to="#services"
+            className="text-gray-500 hover:text-[#7B4AE2]/60 text-lg flex items-center"
+          >
+            <span className="font-bold ml-2">Services</span>
+          </Link>
+
           {/* Careers */}
-          <div>
-            <a
-              href="#careers"
-              className="text-gray-500 hover:text-[#7B4AE2]/60 text-lg flex items-center"
-            >
-              <span className="font-medium ml-2">Careers</span>
-            </a>
-          </div>
+
+          <Link
+            to="#careers"
+            className="text-gray-500 hover:text-[#7B4AE2]/60 text-lg flex items-center"
+          >
+            <span className="font-bold ml-2">Careers</span>
+          </Link>
+
           {/* Contact */}
-          <div>
-            <a
-              href="#contact"
-              className="text-gray-500 hover:text-[#7B4AE2]/60 text-lg flex items-center"
-            >
-              <span className="font-bold ml-2">Contact</span>
-            </a>
-          </div>
+
+          <Link
+            to="#contact"
+            className="text-gray-500 hover:text-[#7B4AE2]/60 text-lg flex items-center"
+          >
+            <span className="font-bold ml-2">Contact</span>
+          </Link>
         </div>
       </div>
     </nav>
